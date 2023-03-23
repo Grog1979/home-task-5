@@ -9,7 +9,7 @@ void InputArray(int[] array)
     array[i] = new Random().Next(100, 1000);
   }
 }
-void PositiveCount(int[] massiv)
+void PositiveNumber(int[] massiv)
 {
   int n = 0;
   for (int count = 0; count < massiv.Length; count++)
@@ -21,10 +21,12 @@ void PositiveCount(int[] massiv)
 }
 
 Console.Clear();
-int[] array = new int[8];
+Console.Write("Введите количество элементов массива n = ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[n];
 InputArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
-PositiveCount(array);
+PositiveNumber(array);
 
 
 
